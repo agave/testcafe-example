@@ -13,7 +13,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "testcafe chrome tests",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test": "testcafe chrome tests/e2e/cases"
   }
 }
