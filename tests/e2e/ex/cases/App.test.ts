@@ -1,7 +1,9 @@
-import HomePage from '../pages/Home.page.js';
+import 'testcafe';
 
 fixture('Homepage test')
   .page('http://localhost:3000/');
+
+import HomePage from '../pages/Home.page';
 
 const page = new HomePage();
 

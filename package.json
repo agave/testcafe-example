@@ -8,12 +8,13 @@
     "react-scripts": "0.9.x"
   },
   "devDependencies": {
+    "@types/node": "^9.4.6",
     "testcafe": "^0.19.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "test": "testcafe chrome tests/e2e/cases"
+    "test": "BASE_URL=http://localhost:4000 testcafe"
   }
 }
