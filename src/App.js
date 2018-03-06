@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function randomWait() {
-  return Math.round(Math.random() * 5000) + 1;
+  return 200 + (Math.round(Math.random() * 5000) + 1);
 }
 
 function mockAwait(shouldFail) {
@@ -65,9 +65,9 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <div className="App-intro">
-          {loading && <p className="status">Loading...</p>}
-          {loaded && <p className="note">Output: {data}</p>}
-          {error && <p className="log">Error: {error.message}</p>}
+          {loading && <p className="is-status">Loading...</p>}
+          {loaded && <p className="is-note">Output: {data}</p>}
+          {error && <p className="is-log">Error: {error.message}</p>}
           <button className="do-success" onClick={() => this.fetchAsync()}>Run async call</button>
           <button className="do-failure" onClick={() => this.fetchAsync(true)}>Run async call (with errors)</button>
         </div>
