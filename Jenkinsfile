@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker { image 'jenkins-slave' }
+    docker { image 'agavelab/jenkins-slave' }
   }
   stages {
     stage('test') {
