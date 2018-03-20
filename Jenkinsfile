@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+    docker { image 'tehranian/dind-jenkins-slave' }
+  }
   stages {
     stage('test') {
       environment {
