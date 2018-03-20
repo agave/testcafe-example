@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  chrome:
+    command: google-chrome http://web-app:9505/browser/connect
+  web-app:
+    container_name: web_app_test
+    environment:
+      NODE_ENV: test
+    command: "sleep infinity"
+    entrypoint: /home/docker/startup.test.sh

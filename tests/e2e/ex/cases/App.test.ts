@@ -1,7 +1,8 @@
 import 'testcafe';
+import { baseUrl } from '../../config';
 
 fixture('Homepage test')
-  .page('http://localhost:3000/');
+  .page(baseUrl);
 
 import HomePage from '../pages/Home.page';
 

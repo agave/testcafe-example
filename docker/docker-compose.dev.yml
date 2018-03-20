@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  web-app:
+    container_name: web_app_dev
+    environment:
+      NODE_ENV: development
+    expose:
+      - "4000"
+    ports:
+      - "4000:4000"
+    volumes:
+      - ../:/var/lib/app
+      # prevent mounting node_modules to avoid cross-platform incompatibilities
+      - /var/lib/app/node_modules
+    entrypoint: /var/lib/app/docker/scripts/startup.dev.sh
