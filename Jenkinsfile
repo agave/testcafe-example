@@ -1,0 +1,12 @@
+pipeline {
+  stage('test') {
+    environment {
+      GITHUB_TOKEN = credentials('GITHUB_TOKEN')
+    }
+    steps {
+      script {
+        env.GITHUB_TOKEN = GITHUB_TOKEN
+      }
+    }
+  }
+}
