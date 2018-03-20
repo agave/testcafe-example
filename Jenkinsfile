@@ -1,6 +1,10 @@
 pipeline {
   agent {
-    docker { image 'agavelab/jenkins-slave' }
+    docker {
+      image 'agavelab/jenkins-slave'
+      args '--privileged'
+    }
+    
   }
   stages {
     stage('test') {
@@ -12,6 +16,7 @@ pipeline {
         script {
           env.GITHUB_TOKEN = GITHUB_TOKEN
         }
+        
       }
     }
   }
