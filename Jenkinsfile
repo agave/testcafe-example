@@ -11,6 +11,7 @@ pipeline {
         script {
           env.GITHUB_TOKEN = GITHUB_TOKEN
         }
+        sh 'make test'
       }
     }
   }
