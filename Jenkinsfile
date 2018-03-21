@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       image 'agavelab/jenkins-slave'
-      args '--privileged --lxc-conf="aa_ profile=unconfined" --entrypoint=""'
+      args '--privileged -lxc-conf="aa_ profile=unconfined"'
     }
     
   }
