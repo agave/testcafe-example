@@ -12,9 +12,7 @@ build: ## Build image
 
 test: ## Test image
 	@docker-compose $(TEST_COMPOSE) up -d
-	@sleep 30
-	@echo $(shell docker-compose -f $(CURRENT_DIRECTORY)docker/docker-compose.yml ps -q web-app)
-	@docker exec $(shell docker-compose -f $(CURRENT_DIRECTORY)docker/docker-compose.yml ps -q web-app) /home/docker/run-tests.sh
+	@docker exec web_app_test /home/docker/run-tests.sh
 
 test-down: ## Clean up test env
 	@docker-compose $(TEST_COMPOSE) down
