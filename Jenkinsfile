@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       image 'agavelab/jenkins-slave'
-      args '-T --privileged -u root:root  --entrypoint=/jenkins-slave-startup.sh'
+      args '--privileged -u root:root  --entrypoint=/jenkins-slave-startup.sh'
     }
     
   }

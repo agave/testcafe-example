@@ -12,7 +12,7 @@ build: ## Build image
 
 test: ## Test image
 	@docker-compose $(TEST_COMPOSE) up -d
-	@docker-compose $(TEST_COMPOSE) exec web-app /home/docker/run-tests.sh
+	@docker-compose $(TEST_COMPOSE) exec -T web-app /home/docker/run-tests.sh
 
 test-down: ## Clean up test env
 	@docker-compose $(TEST_COMPOSE) down
