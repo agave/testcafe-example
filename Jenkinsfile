@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       image 'agavelab/jenkins-slave'
-      args '--privileged=true'
+      args '--privileged -v /var/lib/docker:/var/lib/docker'
     }
     
   }
