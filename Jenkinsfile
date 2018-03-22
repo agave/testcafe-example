@@ -12,7 +12,7 @@ pipeline {
         GITHUB_TOKEN = credentials('GITHUB_TOKEN')
       }
       steps {
-        sh 'sleep 600 && make test'
+        sh 'ls . && sleep 60 && make test'
         script {
           env.GITHUB_TOKEN = GITHUB_TOKEN
         }
