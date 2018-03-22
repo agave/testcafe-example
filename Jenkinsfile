@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-      image 'agavelab/jenkins-slave'
       args '--privileged -u root:root  --entrypoint=/jenkins-slave-startup.sh -e "DOCKER_DAEMON_ARGS=--registry-mirror=http://192.168.0.100"'
+      image 'agavelab/jenkins-slave:proxy'
     }
     
   }
